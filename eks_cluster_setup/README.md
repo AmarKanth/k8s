@@ -8,6 +8,7 @@
 
 ### IAM user and permissions
 Create additional policies required to manage eks cluster
+
 EKS-Admin-policy:
 ```
 {
@@ -23,6 +24,7 @@ EKS-Admin-policy:
     ]
 }
 ```
+
 CloudFormation-Admin-policy:
 ```
 {
@@ -38,6 +40,7 @@ CloudFormation-Admin-policy:
     ]
 }
 ```
+
 Assign the following policies to your IAM user
 - AmazonEC2FullAccess
 - IAMFullAccess
