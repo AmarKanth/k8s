@@ -47,3 +47,8 @@ Assign the following policies to your IAM user
 - AmazonVPCFullAccess
 - CloudFormation-Admin-policy
 - EKS-Admin-policy  
+
+### Prerequisites
+- AWS CLI(configure with IAM user)
+- eksctl
+- kubectl
