@@ -52,3 +52,12 @@ Assign the following policies to your IAM user
 - AWS CLI(configure with IAM user)
 - eksctl
 - kubectl
+
+### Commands
+```
+eksctl create cluster -f eks-cluster.yaml
+kubectl get nodes
+eksctl get cluster
+eksctl get nodegroup --cluster eks-cluster
+eksctl delete cluster -f eks-cluster.yaml
+```
