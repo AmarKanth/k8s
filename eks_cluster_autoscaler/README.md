@@ -10,3 +10,4 @@ kubectl -n kube-system describe deployment cluster-autoscaler
 kubectl apply -f nginx-deployment.yml
 kubectl scale --replicas=30 deployment/test-autoscaler
 kubectl -n kube-system logs -f deployment.apps/cluster-autoscaler
+eksctl delete cluster -f eks-cluster.yaml
