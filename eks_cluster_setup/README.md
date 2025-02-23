@@ -56,8 +56,12 @@ Assign the following policies to your IAM user
 ### Commands
 ```
 eksctl create cluster -f eks-cluster.yaml
+
 kubectl get nodes
 eksctl get cluster
+
 eksctl get nodegroup --cluster eks-cluster
+eksctl scale nodegroup --cluster eks-cluster --nodes 5 --nodes-max 5 --name ng-1
+
 eksctl delete cluster -f eks-cluster.yaml
 ```
