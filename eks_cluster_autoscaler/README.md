@@ -12,8 +12,6 @@ kubectl apply -f \
 https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/ \
 cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
 ```
- > If the default configuration doesn't work, create an override for the cluster-autoscaler
- > service account with autoscaling policies.
 
 + Annotate the Cluster Autoscaler deployment to prevent eviction
 ```
@@ -46,3 +44,12 @@ kubectl -n kube-system logs -f deployment.apps/cluster-autoscaler
 ```
 eksctl delete cluster -f eks-cluster.yaml
 ```
+
++ Manual Approach to Grant Autoscaling Privileges
+```
+iam:
+      withAddonPolicies:
+        autoScaler: true
+```
+> If the default configuration doesn't work, create an override for the cluster-autoscaler
+> service account with autoscaling policies.
