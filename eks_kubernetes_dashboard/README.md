@@ -32,3 +32,8 @@ kubectl proxy
 http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/\
 services/https:kubernetes-dashboard:/proxy/#/login
 ```
+
++ Clean up cluster
+```
+eksctl delete cluster -f eks-cluster.yaml
+```
