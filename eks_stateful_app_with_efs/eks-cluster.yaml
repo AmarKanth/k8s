@@ -14,3 +14,5 @@ managedNodeGroups:
     availabilityZones: ["ap-south-1a"]
     ssh:
       publicKeyName: eks-keypair
+    preBootstrapCommands:
+      - "sudo yum install -y amazon-efs-utils"

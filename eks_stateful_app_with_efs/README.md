@@ -2,7 +2,7 @@
 2. EFS works with ec2 instances with multi-az
 
 ```
-ssh -i "vpc-course.pem" ec2-user@ec2-13-232-180-150.ap-south-1.compute.amazonaws.com "sudo yum install -y amazon-efs-utils"
+eksctl create cluster -f eks-cluster.yaml
 ```
 
 ```
@@ -48,4 +48,8 @@ sudo ls -al /var/lib/kubelet/pods/2cc8adaf-2d64-4f05-bca2-0ae8a97770fb/volumes/k
 
 ```
 kubectl apply -f wp-deployment.yaml -n ns-eks-course-efs
+```
+
+```
+eksctl delete cluster -f eks-cluster.yaml
 ```
