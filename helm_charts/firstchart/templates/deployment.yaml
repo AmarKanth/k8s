@@ -1,5 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
+  {{.Values.my.custom.data}}
+  {{.Chart.Name}}
+  {{.Chart.Version}}
+  {{.Chart.AppVersion}}
+  {{.Chart.Annotations}}
+  {{.Release.Name}}
+  {{.Release.Namespace}}
+  {{.Release.IsInstall}}
+  {{.Release.IsUpgrade}}
+  {{.Release.Service}}
+  {{.Template.Name}}
+  {{.Template.BasePath}}
+  {{.Values.my.custom.data | default "testdefault" | upper}}
+  {{- if .Values.my.flag }}
+  {{"Output of if" | nindent 2}}
+  {{- else}}
+  {{"Output of else" | nindent 2}}
+  {{- end}}
+  {{- with .Values.my.values}}
+  {{- toYaml . | nindent 2}}
+  {{- end}}
 metadata:
   name: {{ include "firstchart.fullname" . }}
   labels:
