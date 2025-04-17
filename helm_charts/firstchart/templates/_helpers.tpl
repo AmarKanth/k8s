@@ -1,4 +1,11 @@
 {{/*
+Custom Template
+*/}}
+{{- define "firstchart.mytemplate" -}}
+{{- .Values.myValue }}
+{{- end }}
+
+{{/*
 Expand the name of the chart.
 */}}
 {{- define "firstchart.name" -}}
