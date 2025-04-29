@@ -27,3 +27,4 @@ dependencies:
   - name: mysql
     version: "9.10.2"
     repository: "http://charts.bitnami.com/bitnami"
+    condition: mysql.enabled

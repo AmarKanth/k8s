@@ -130,3 +130,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+mysql:
+  enabled: true
+  auth:
+    rootPassword: test123
+  primary:
+    service:
+      type: NodePort
+      nodePort: 30788
