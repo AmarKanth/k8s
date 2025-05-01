@@ -35,4 +35,5 @@ helm template firstchart
 helm dependency update firstchart
 helm install myfirstapp firstchart
 helm uninstall myfirstapp firstchart
+helm test myfirstapp
 ```
